@@ -1,0 +1,288 @@
+/* @import url('https://fonts.googleapis.com/css3?family=Kumbh+Sans:wght@400;700&display=swap'); */
+
+@font-face {
+    font-family: kumbhSansNormal;
+    src: url('../fonts/KumbhSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: kumbhSansBold;
+    src: url('../fonts/KumbhSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    user-select: none;
+}
+
+body {
+    font-family: kumbhSansNormal;
+}
+
+/* NAVBAR */
+.navbar {
+    border-bottom: 2px solid #e8e7ec;
+    position: relative;
+}
+
+.navbar .avatar-image img {
+    width: 60px;
+}
+
+.navbar .nav-link {
+    color: hsl(219, 9%, 45%);
+    border-bottom: 4px solid rgba(255, 111, 0, 0);
+}
+
+.navbar .nav-link:hover {
+    border-bottom: 4px solid #ff7d1b;
+}
+
+.navbar .avatar-image,
+.navbar .cart-icon {
+    cursor: pointer;
+}
+
+.navbar .avatar-image {
+    border-radius: 100%;
+    border: 3px solid #ff7a1500;
+    transition: 0.25s;
+}
+
+.navbar .avatar-image:hover {
+    border: 3px solid #ff7a15;
+}
+
+.navbar .cart-icon .number-up-cart {
+    width: 30px;
+    height: 16px;
+    position: absolute;
+    top: 45px;
+    right: 99px;
+    background-color: #ff7a15;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .cart-icon .cart-list {
+    cursor: default;
+    width: 420px;
+    height: 250px;
+    position: absolute;
+    top: 105px;
+    right: 0px;
+    z-index: 100;
+    box-shadow: 0px 6px 25px -17px #000;
+    font-family: kumbhSansBold;
+    display: none;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value {
+    color: hsl(219, 9%, 45%);
+    height: 60%;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value .container-price,
+.navbar .cart-icon .cart-list .cart-list-value .product-name {
+    font-family: kumbhSansNormal;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value .container-price .total {
+    font-family: kumbhSansBold;
+    color: #000;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value .product-contaienr .delete-icon {
+    cursor: pointer;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value .btn-check-cart {
+    background-color: #ff7a15;
+    transition: 0.5s;
+}
+
+.navbar .cart-icon .cart-list .cart-list-value .btn-check-cart:hover {
+    cursor: pointer;
+    background-color: #ffac6a;
+}
+
+/* NAV -> MENU BAR STYLES */
+.navbar .navbar-toggler {
+    border-color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* PRODUCT IMAGE */
+.carousel-item {
+    cursor: pointer;
+}
+
+.carousel-indicators .bottom-image {
+    position: relative;
+    width: 75px !important;
+    height: 75px !important;
+    border: 3px solid #ff7a15 !important;
+    opacity: 0.5 !important;
+    top: 120px;
+    margin: 0px 5% !important;
+}
+
+.carousel-indicators .bottom-image:not(.active):hover {
+    opacity: 0.5 !important;
+}
+
+.carousel-indicators .bottom-image:not(.active) {
+    opacity: 1 !important;
+    border: 3px solid #ff7a1500 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.9 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #fff !important;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0px 20px;
+}
+
+/* DETAIS */
+.details .company-name {
+    font-family: kumbhSansBold;
+    font-size: 14px;
+    color: #ee8e44;
+}
+
+.details .title {
+    font-family: kumbhSansBold;
+}
+
+.details p {
+    font-size: 16px;
+    color: hsl(219, 9%, 45%);
+}
+
+.details .new-price,
+.details .original-price {
+    font-family: kumbhSansBold;
+}
+
+.details .original-price {
+    color: #bfc2cb;
+    text-decoration: line-through;
+}
+
+.details .price .off-text {
+    background-color: #ffeee0;
+    color: #ee8e44;
+}
+
+.details .container-number {
+    background-color: hsl(223, 64%, 98%);
+}
+
+.details .number-of-product {
+    font-family: kumbhSansBold;
+}
+
+.details .minus,
+.details .plus {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.details .add-to-cart-btn {
+    font-family: kumbhSansBold;
+    background-color: #ff7a15;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.details .minus:hover,
+.details .plus:hover {
+    opacity: 0.5;
+}
+
+.details .add-to-cart-btn:hover {
+    background-color: #ffac6a;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width:991px) {
+    .navbar .navbar-collapse {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        /* display: block !important; */
+        z-index: 150;
+        height: 100%;
+        width: 0%;
+    }
+
+    .navbar .dark-bg {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 149;
+        background-color: #0000008f;
+    }
+
+    .navbar .cart-icon .cart-list .cart-list-value {
+        height: 170px;
+    }
+
+    .navbar {
+        border-bottom: none;
+    }
+
+    .navbar .navbar-collapse .nav-link {
+        padding: 20px 0px !important;
+        font-family: kumbhSansBold;
+        border: none !important;
+        color: #000;
+    }
+
+    .navbar .avatar-image img {
+        width: 40px;
+    }
+
+    .navbar .cart-icon .number-up-cart {
+        top: 14px;
+        right: 47px;
+    }
+
+    .navbar .cart-icon .cart-list {
+        width: 100%;
+        min-height: 250px;
+        height: fit-content;
+        top: 80px;
+        right: 0px;
+    }
+
+    .product-image .carousel-item img {
+        border-radius: 0px !important;
+    }
+
+    .product-image .bottom-image {
+        display: none;
+    }
+}
